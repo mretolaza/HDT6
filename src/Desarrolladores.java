@@ -25,7 +25,7 @@ public class Desarrolladores {
 			setMenu();
 
 			int tipoSet = scan.nextInt();
-			FactoryDesarrollo<String> FactoryDesarrolladores = new FactoryDesarrollo<String>();
+			CollectionFram FactoryDesarrolladores = new CollectionFram(tipoSet);
 			System.out.println("Ingrese la cantidad de personas que ingresara: ");
 			int cantPersona = scan.nextInt();
 
