@@ -10,7 +10,7 @@ import java.util.Set;
  * @author Marìa Mercedes Retolaza Reyna, 16339 
  */
 /**
- * @author MECHES
+ * @author Marìa Mercedes Retolaza Reyna, 16339 
  *
  */
 public class CollectionFram {
@@ -179,26 +179,25 @@ public class CollectionFram {
 		Iterator<String> itr = setWeb.iterator();
 		int contador = 0;
 		while (itr.hasNext()){
-			Object element = itr.next();
-			Iterator<String> itr2 = setJava.iterator();
+			Object element = itr.next();Iterator<String> itr2 = setJava.iterator();
 			while (itr2.hasNext()){
 				Object element2 = itr2.next();
 				if(element.equals(element2)){
 					existArray[contador] = true;
+					}
 				}
-			}
 			contador++;
-		}
-		boolean isSubconjunto = true;
+		}boolean isSubconjunto = true;
 		for(int i = 0; i < existArray.length; i++){
 			if(existArray[i] == false){
-				isSubconjunto = false;
-			}
+				isSubconjunto = false;}
 		}
 		if(isSubconjunto){
-			System.out.println("El conjunto de desarrolladores java SI es un subconjunto del conjunto de desarrolladores web.");
+			System.out.println("El conjunto de desarrolladores java SI es un subconjunto"
+					+ " del conjunto que esta conformado por los desarroladores web.");
 		}else{
-			System.out.println("El conjunto de desarrolladores java NO es un subconjunto del conjunto de desarrolladores web.");
+			System.out.println("El conjunto de desarrolladores java NO es un subconjunto del "
+					+ "conjunto de desarrolladores web. Puede intentar con otro conjunto de personas mas tarde");
 		}
 	}
 
