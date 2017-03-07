@@ -76,13 +76,13 @@ public class Desarrolladores {
 					FactoryDesarrolladores.tresIntersecciones();
 					break;
 				case 2:
-					FactoryDesarrolladores.javaNoWeb();
+					FactoryDesarrolladores.YjavaNWeb();
 					break;
 				case 3:
-					FactoryDesarrolladores.webYMovilNoJava();
+					FactoryDesarrolladores.MovilYWeb_NoJava();
 					break;
 				case 4:
-					FactoryDesarrolladores.webOMovilNoJava();
+					FactoryDesarrolladores.webOMovil_NoJava();
 					break;
 				case 5:
 					FactoryDesarrolladores.javaSubWeb();
