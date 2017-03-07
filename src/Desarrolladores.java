@@ -19,6 +19,7 @@ public class Desarrolladores {
 	 */
 	public static void main(String[] args) throws IOException {
 		try{
+			@SuppressWarnings("resource")
 			Scanner scan = new Scanner(System.in);
 			System.out.println("Bienvenido al programa de conjuntos de desarrolladores!");
 			System.out.println();
@@ -26,7 +27,7 @@ public class Desarrolladores {
 
 			int tipoSet = scan.nextInt();
 			CollectionFram FactoryDesarrolladores = new CollectionFram(tipoSet);
-			System.out.println("Ingrese la cantidad de personas que ingresara: ");
+			System.out.println("Ingrese la cantidad de personas que va a evaluar en el programa: ");
 			int cantPersona = scan.nextInt();
 
 			for(int i = 0; i < cantPersona; i ++){
@@ -34,7 +35,7 @@ public class Desarrolladores {
 				String nombre = scan.next();
 				System.out.println("A cuantos conjuntos quiere agregar a esta persona?: ");
 				int cantGrupos = scan.nextInt();
-				System.out.println("Seleccione el conjunto al que quiere agregarla: ");
+				System.out.println("Ahora bie;-- Seleccione el conjunto al que quiere agregarla: ");
 				conjutosMenu();
 				int tipoConjunto = scan.nextInt();
 				switch (tipoConjunto){
@@ -103,20 +104,6 @@ public class Desarrolladores {
 		}
 
 	}
-	public static void menuPrincipal(){
-		System.out.println();
-		System.out.println("---Bienvenido al Menù Principal del Programa---");
-		System.out.println();
-		System.out.println("Seleccione la informacion que desea consultar: ");
-		System.out.println("1) Desarrolladores con experiencia en Java, web, y celulares");
-		System.out.println("2) Desarrolladores con experiencia en Java pero que no tengan experiencia en web");
-		System.out.println("3) Desarrolladores con experiencia en web y celulares, pero sin experiencia en Java");
-		System.out.println("4) Desarrolladores con experiencia en web o celulares, pero sin experiencia en Java");
-		System.out.println("5) El conjunto de desarrolladores Java es un subconjunto de desarrolladores web?");
-		System.out.println("6) Cual es el conjunto mas grande? (Mostrar tambien los nombres de los desarrolladores)");
-		System.out.println("7) Desplegar lista con los nombres de los desarrolladores del conjunto mas grande en orden ascendente");
-		System.out.println("8) Salir del Programa");
-	}
 	
 	public static void setMenu(){
 		System.out.println("Seleccione el tipo de SET que utilizara el programa:");
@@ -131,6 +118,22 @@ public class Desarrolladores {
 		System.out.println("2) Desarrolladores Java");
 		System.out.println("3) Desarrolladores Moviles");
 	}
+	
+	public static void menuPrincipal(){
+		System.out.println();
+		System.out.println("---Bienvenido al Menù Principal del Programa---");
+		System.out.println();
+		System.out.println("Seleccione la informacion que desea consultar: ");
+		System.out.println("1) Desarrolladores con experiencia en Java, web, y Movil");
+		System.out.println("2) Desarrolladores con experiencia en Java pero que NO tengan experiencia en web");
+		System.out.println("3) Desarrolladores con experiencia en web y Movil, pero SIN experiencia en Java");
+		System.out.println("4) Desarrolladores con experiencia en web o Movil, pero SIN experiencia en Java");
+		System.out.println("5) El conjunto de desarrolladores Java es un subconjunto de desarrolladores web?");
+		System.out.println("6) Cual es el conjunto mas grande? (Mostrar tambien los nombres de los desarrolladores)");
+		System.out.println("7) Desplegar lista con los nombres de los desarrolladores del conjunto mas grande en orden ascendente");
+		System.out.println("8) Salir del Programa-- No se guardara ningun cambio");
+	}
+	
 
 	
 }
