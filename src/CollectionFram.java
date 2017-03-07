@@ -202,9 +202,10 @@ public class CollectionFram {
 	}
 
 	/**
-	 * Metodo que muestra cual es el conjunto de desarrolladores mas grande y los nombres de los desarrolladores de dicho conjunto.
+	 * Metodo que muestra cual es el conjunto de desarrolladores que tienen un mayor grupo y
+	 *  los nombres de los desarrolladores de dicho conjunto.
 	 */
-	public void masGrande(){
+	public void GrupoMasGrande(){
 		Set<String> setMasGrande = null;
 		String nombreConjunto = "";
 		if (setWeb.size() > setJava.size() && setWeb.size() > setMovil.size()){
@@ -227,11 +228,11 @@ public class CollectionFram {
 				System.out.println(element);
 			}
 		}else{
-			System.out.println("Existen varios conjuntos del mismo tamanio!");
+			System.out.println("Existen varios conjuntos del mismo tamaño!");
 		}
-	}
+	}// end del bloque 
 
-	public void masGrandeAscendente(){
+	public void MASGrandeAscendente(){
 		Set<String> setMasGrande = null;
 		if (setWeb.size() > setJava.size() && setWeb.size() > setMovil.size()){
 			setMasGrande = setWeb;
@@ -259,4 +260,4 @@ public class CollectionFram {
 
 	}
 
-}
+}// end del programa 

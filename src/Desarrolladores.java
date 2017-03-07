@@ -14,8 +14,8 @@ public class Desarrolladores {
 	 * con el programa y el puede elegir la opciòn que desea observar segun lo que el 
 	 * necesite. 
 	 * Se implementa IOExcepction para validaciòn del programa. 
-	 * @param args
-	 * @throws IOException
+	 * @param args parametro del main 	
+	 * @throws IOException parametro de validacion 
 	 */
 	public static void main(String[] args) throws IOException {
 		try{
@@ -88,10 +88,10 @@ public class Desarrolladores {
 					FactoryDesarrolladores.javaSubWeb();
 					break;
 				case 6:
-					FactoryDesarrolladores.masGrande();
+					FactoryDesarrolladores.GrupoMasGrande();
 					break;
 				case 7:
-					FactoryDesarrolladores.masGrandeAscendente();
+					FactoryDesarrolladores.MASGrandeAscendente();
 					break;
 				case 8:
 					mostrarMenu = false;
