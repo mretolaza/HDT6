@@ -1,3 +1,4 @@
+//Llamado de librerías 
 import java.util.Iterator;
 import java.util.Set;
 
@@ -48,6 +49,9 @@ public class CollectionFram {
 		setMovil.add(persona);
 	}
 
+	//Para realizar el procedimiento de "TresIntersecciones" se tomó como referencia el siguiente 
+	//codigo http://lineadecodigo.com/java/usando-las-clases-hashset-y-hashmap/ 
+	
 	/**
 	 * Metodo que muestra los nombres de los desarrolladores con experiencia en los tres luagres de 
 	 * desarrolo. 
@@ -91,7 +95,11 @@ public class CollectionFram {
 			}
 		}
 	}// End del segundo Bloque 
-
+	
+	//Para realizar el procedimiento de "MovilYWeb_NoJava" se tomó como referencia el siguiente 
+	//codigo http://lineadecodigo.com/java/usando-las-clases-hashset-y-hashmap/ 
+	//Tambien se siguó el patrón de TresIntersecciones 
+		
 	/**
 	 * Metodo que muestra los nombres de los desarrolladores que tienen experiencia en Web y
 	 *  Desarrollo movil pero no tienen experiencia en JAVA.
@@ -134,12 +142,9 @@ public class CollectionFram {
 			while (itr2.hasNext()){
 				Object element2 = itr2.next();
 				if (element.equals(element2)){
-					exist = true;
-				}
-			}
+					exist = true;}}
 			if (!exist){
-				System.out.println(element);}
-		}
+				System.out.println(element);}}
 
 		itr = setMovil.iterator();
 		while (itr.hasNext()){
@@ -148,20 +153,15 @@ public class CollectionFram {
 			boolean exist = false;
 			while (itr2.hasNext()){Object element2 = itr2.next();
 			if (element.equals(element2)){
-				exist = true;
-			}
-			}
+				exist = true;}}
 			if (!exist){
 				Iterator<String> itr3 = setJava.iterator();
 				boolean exist2 = false;
 				while(itr3.hasNext()){Object element3 = itr3.next();
 				if(element.equals(element3)){
-					exist2 = true;
-				}
-				}
+					exist2 = true;}}
 				if(!exist2){
-					System.out.println(element);}
-			}
+					System.out.println(element);}}
 		}
 	}// end del bloque 
 
@@ -177,21 +177,17 @@ public class CollectionFram {
 			existArray[i] = false;
 		}
 		Iterator<String> itr = setWeb.iterator();
-		int contador = 0;
+		int cont = 0;
 		while (itr.hasNext()){
 			Object element = itr.next();Iterator<String> itr2 = setJava.iterator();
 			while (itr2.hasNext()){
 				Object element2 = itr2.next();
 				if(element.equals(element2)){
-					existArray[contador] = true;
-					}
-				}
-			contador++;
-		}boolean isSubconjunto = true;
+					existArray[cont] = true;}}
+			cont++;}boolean isSubconjunto = true;
 		for(int i = 0; i < existArray.length; i++){
 			if(existArray[i] == false){
-				isSubconjunto = false;}
-		}
+				isSubconjunto = false;}}
 		if(isSubconjunto){
 			System.out.println("El conjunto de desarrolladores java SI es un subconjunto"
 					+ " del conjunto que esta conformado por los desarroladores web.");

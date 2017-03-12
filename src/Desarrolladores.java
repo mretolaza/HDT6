@@ -17,6 +17,9 @@ public class Desarrolladores {
 	 * @param args parametro del main 	
 	 * @throws IOException parametro de validacion 
 	 */
+	
+	//Interaccion con el usuario (implementa los procedimientos del menu, los sets y hace el ingreso de los desarrolladores
+	//al sistema 
 	public static void main(String[] args) throws IOException {
 		try{
 			@SuppressWarnings("resource")
@@ -33,9 +36,9 @@ public class Desarrolladores {
 			for(int i = 0; i < cantPersona; i ++){
 				System.out.println("Escriba el nombre del desarrollador: ");
 				String nombre = scan.next();
-				System.out.println("A cuantos conjuntos quiere agregar a esta persona?: ");
+				System.out.println("Elija la cantidad de conjuntos en los que participará dicha persona: ");
 				int cantGrupos = scan.nextInt();
-				System.out.println("Ahora bie;-- Seleccione el conjunto al que quiere agregarla: ");
+				System.out.println("Ya que los agrego;... Seleccione el conjunto al que quiere agregarla: ");
 				conjutosMenu();
 				int tipoConjunto = scan.nextInt();
 				switch (tipoConjunto){
@@ -51,7 +54,7 @@ public class Desarrolladores {
 				}
 				if (cantGrupos > 1){
 					for (int i2 = 0; i2 < cantGrupos - 1; i2++){
-						System.out.println("Seleccione el otro conjunto al que quiere agregarla: ");
+						System.out.println("Porfavor Seleccione al otro conjunto al que quiere agregarla: ");
 						conjutosMenu();
 						tipoConjunto = scan.nextInt();
 						switch (tipoConjunto) {
@@ -100,11 +103,11 @@ public class Desarrolladores {
 				}
 			}
 		}catch (Exception e){
-			System.out.println("Ha ingresado un dato invalido! Por favor reinicie el programa y vuelva a intentarlo!");
+			System.out.println("ERROR ; Datos inválidos. Vuelva a comenzar el programa");
 		}
 
 	}
-	
+	//Procedimiento que muestra los sets 
 	public static void setMenu(){
 		System.out.println("Seleccione el tipo de SET que utilizara el programa:");
 		System.out.println();
@@ -112,13 +115,13 @@ public class Desarrolladores {
 		System.out.println("2) TreeSet");
 		System.out.println("3) LinkedHashSet");
 	}
-
+   //Procedimiento que muestra los conjuntos en el menú 
 	public static void conjutosMenu(){
 		System.out.println("1) Desarrolladores Web");
 		System.out.println("2) Desarrolladores Java");
 		System.out.println("3) Desarrolladores Moviles");
 	}
-	
+	//Las preguntas se muestran en el orden que esta en la hoja de trabajo. 
 	public static void menuPrincipal(){
 		System.out.println();
 		System.out.println("---Bienvenido al Menù Principal del Programa---");
